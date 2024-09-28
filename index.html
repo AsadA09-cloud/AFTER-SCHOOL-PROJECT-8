@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading Effects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #ff6b6b, #f06595);
+            margin: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s, background-color 0.5s;
+        }
+
+        .box:hover {
+            transform: scale(1.2) rotate(15deg);
+            background-color: #f06595;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: slide 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="animated-box"></div>
+</body>
+</html>
